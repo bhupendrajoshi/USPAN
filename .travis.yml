@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 6
+
+before_script:
+  - cd webapp
+
+cache:
+  yarn: true
+  directories:
+    - webapp/node_modules
+
+script:
+  - yarn
+  - yarn test
