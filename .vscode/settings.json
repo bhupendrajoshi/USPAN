@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "eslint.options": {
+        "extends": "airbnb",
+        "plugins": [
+            "react",
+            "jsx-a11y",
+            "import"
+        ]
+    },
+    "eslint.autoFixOnSave": true,
+    "typescript.check.tscVersion": false,
+    "editor.snippetSuggestions": "top"
+}
