@@ -12,7 +12,6 @@ script:
   - cd webapp
   - yarn
   - yarn test
-  - cd ..
-  - cd native
+  - cd ../native
   - yarn
   - yarn test
