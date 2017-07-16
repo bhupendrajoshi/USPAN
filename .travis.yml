@@ -2,14 +2,17 @@ language: node_js
 node_js:
   - 6
 
-before_script:
-  - cd webapp
-
 cache:
   yarn: true
   directories:
     - webapp/node_modules
+    - native/node_modules
 
 script:
+  - cd webapp
+  - yarn
+  - yarn test
+  - cd ..
+  - cd native
   - yarn
   - yarn test
