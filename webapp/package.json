@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "chai": "^4.1.0",
@@ -17,7 +19,6 @@
     "prop-types": "^15.5.10",
     "react-scripts": "1.0.10",
     "react-test-renderer": "^15.6.1",
-    "test": "^0.6.0",
     "testcafe": "^0.16.2"
   },
   "scripts": {
@@ -25,6 +26,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "e2e-tests": "testcafe chrome e2etests/App.e2etests.js"
+    "e2e": "testcafe chrome e2e/App.test.js"
   }
 }
