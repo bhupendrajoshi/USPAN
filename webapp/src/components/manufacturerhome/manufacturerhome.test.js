@@ -1,12 +1,11 @@
 /* global expect, it, describe, jest, beforeEach */
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import ManufacturerHome from './manufacturerhome';
 
 describe('BuyerHome component', () => {
   let component;
-  const submitMock = jest.fn();
 
   beforeEach(() => {
     component = shallow(
