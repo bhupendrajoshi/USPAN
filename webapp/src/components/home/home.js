@@ -15,11 +15,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn buyer" onClick={event => this.gotoRoute(event, '/buyers')}>
-          Buyers
-        </button>
-        <button className="btn manufacturer" onClick={event => this.gotoRoute(event, '/manufacturers')}>
-          Manufacturers
+        <button className="btn register" onClick={event => this.gotoRoute(event, '/register')}>
+          Register
         </button>
       </div>
     );

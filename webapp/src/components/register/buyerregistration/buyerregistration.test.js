@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import ManufacturerHome from './manufacturerhome';
+import BuyerRegistration from './buyerregistration';
 
-describe('BuyerHome component', () => {
+describe('BuyerRegistration component', () => {
   let component;
 
   beforeEach(() => {
     component = shallow(
-      <ManufacturerHome />,
+      <BuyerRegistration />,
     );
   });
 
@@ -17,7 +17,7 @@ describe('BuyerHome component', () => {
     expect(component.exists()).toEqual(true);
   });
 
-  it('Should have buyer as title', () => {
-    expect(component.find('.title').length).toEqual(1);
+  it('Should have register button', () => {
+    expect(component.find('.submit').length).toEqual(1);
   });
 });

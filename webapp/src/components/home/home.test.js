@@ -1,12 +1,11 @@
-/* global expect, it, describe, jest, beforeEach */
+/* global expect, it, describe, beforeEach */
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Home from './home';
 
 describe('Home component', () => {
   let component;
-  const submitMock = jest.fn();
 
   beforeEach(() => {
     component = shallow(
@@ -18,11 +17,7 @@ describe('Home component', () => {
     expect(component.exists()).toEqual(true);
   });
 
-  it('Should have buyer button', () => {
-    expect(component.find('.buyer').length).toEqual(1);
-  });
-
-  it('Should have manufacturer button', () => {
-    expect(component.find('.manufacturer').length).toEqual(1);
+  it('Should have register button', () => {
+    expect(component.find('.register').length).toEqual(1);
   });
 });

@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, HashRouter, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/home/home';
-import BuyerHome from './components/buyerhome/buyerhome';
-import ManufacturerHome from './components/manufacturerhome/manufacturerhome';
+import Registration from './components/register/registration';
+import BuyerRegistration from './components/register/buyerregistration/buyerregistration';
 
 class App extends React.Component {
   render() {
@@ -12,8 +12,8 @@ class App extends React.Component {
         <HashRouter>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/buyers" component={BuyerHome} />
-            <Route path="/manufacturers" component={ManufacturerHome} />
+            <Route path="/register" component={Registration} />
+            <Route path="/buyerregistration" component={BuyerRegistration} />
           </Switch>
         </HashRouter>
       </div>
