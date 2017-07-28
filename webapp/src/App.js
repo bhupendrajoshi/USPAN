@@ -1,21 +1,40 @@
-import React from 'react';
-import { Switch, HashRouter, Route } from 'react-router-dom';
-import './App.css';
-import Home from './components/home/home';
-import Registration from './components/register/registration';
-import BuyerRegistration from './components/register/buyerregistration/buyerregistration';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import HomeComponent from './components/home';
+import ContactUsComponent from './components/contactus';
+import RegisterComponent from './components/register';
 
-class App extends React.Component {
+class App extends Component {
+  state = {
+    isAuthenticated: false
+  }
+
+  onSignUpUsingEmail(userDetails) {
+    this.setState({ isAuthenticated: true });
+  }
+
+  onSubmitForm = (details) => {
+    console.log(details);
+  }
+
   render() {
     return (
       <div className="App">
-        <HashRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/register" component={Registration} />
-            <Route path="/buyerregistration" component={BuyerRegistration} />
-          </Switch>
-        </HashRouter>
+        <Route exact path='/' render={() => (
+          <HomeComponent
+            isAuthenticated={this.state.isAuthenticated}
+            signUpEmail={(userDetails) => this.onSignUpUsingEmail(userDetails)}
+          />
+        )} />
+
+        <Route exact path='/contactus' render={({ history }) => (
+          <ContactUsComponent submitForm={(details) => {
+            this.onSubmitForm(details);
+            history.push('/');
+          }} />
+        )} />
+
+        <Route exact path='/register' component={RegisterComponent} />
       </div>
     );
   }

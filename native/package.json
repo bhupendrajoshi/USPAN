@@ -1,6 +1,15 @@
 {
-  "name": "native",
+  "name": "uspan-native",
   "version": "0.1.0",
+  "description": "Uninterrupted Service Providers for Apparel Needs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhupendrajoshi/uspan.git"
+  },
+  "author": {
+    "name": "Laurens Oomen, Vikas Pandey, Bhupendra Joshi",
+    "email": "vikpande@gmail.com"
+  },
   "private": true,
   "devDependencies": {
     "jest-expo": "~18.0.0",
