@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class HomeComponent extends Component {
 
   render() {
     return (
       <div>
-        <Link to='register'>Sign-In</Link>
-        <button>Register</button>
+        <header>
+          USPAN
+        </header>
 
-        <Link to='/contactus'>Contact us</Link>
+        <div className="content">
+          <RaisedButton label='Sign-In' containerElement={<Link to='signin' />} />
+          <RaisedButton label='Register' containerElement={<Link to='register' />} />
+        </div>
       </div>
     );
   }

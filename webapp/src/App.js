@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+
 import HomeComponent from './components/home';
 import ContactUsComponent from './components/contactus';
-import RegisterComponent from './components/register';
+import SignInComponent from './components/signin';
+import RegisterComponent from './components/registration/register';
+import BuyerRegistrationComponent from './components/registration/buyerregistration';
+import ManufacturerRegistrationComponent from './components/registration/maufacturerregistration';
+
+import database from './configuration/firebase';
 
 class App extends Component {
   state = {
@@ -14,12 +20,12 @@ class App extends Component {
   }
 
   onSubmitForm = (details) => {
-    console.log(details);
+    database.database().ref('requests').push(details);
   }
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Route exact path='/' render={() => (
           <HomeComponent
             isAuthenticated={this.state.isAuthenticated}
@@ -35,6 +41,13 @@ class App extends Component {
         )} />
 
         <Route exact path='/register' component={RegisterComponent} />
+        <Route exact path='/signin' component={SignInComponent} />
+        <Route exact path='/register/buyerregistration' component={BuyerRegistrationComponent} />
+        <Route exact path='/register/manufacturerregistration' component={ManufacturerRegistrationComponent} />
+
+        <footer>
+          <Link to='/contactus'>Contact us</Link>
+        </footer>
       </div>
     );
   }
