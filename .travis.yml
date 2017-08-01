@@ -9,9 +9,9 @@ cache:
     - native/node_modules
 
 script:
-  - cd webapp
-  - yarn
-  - yarn test
+  # - cd webapp
+  # - yarn
+  # - yarn test
   - cd ../native
   - yarn
   - yarn test
