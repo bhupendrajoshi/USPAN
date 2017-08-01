@@ -47,6 +47,7 @@ class App extends Component {
 
         <footer>
           <Link to='/contactus'>Contact us</Link>
+          <Link to='/aboutus'>About us</Link>
         </footer>
       </div>
     );
