@@ -8,6 +8,9 @@ import RegisterComponent from './components/registration/register';
 import BuyerRegistrationComponent from './components/registration/buyerregistration';
 import ManufacturerRegistrationComponent from './components/registration/maufacturerregistration';
 import Aboutus from './components/aboutus';
+import AppBar from 'material-ui/AppBar';
+import Addtext from './components/addtext';
+
 
 import database from './configuration/firebase';
 
@@ -27,6 +30,11 @@ class App extends Component {
   render() {
     return (
       <div>
+          <AppBar
+            title="Add text"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          />
+
         <Route exact path='/' render={() => (
           <HomeComponent
             isAuthenticated={this.state.isAuthenticated}
@@ -40,15 +48,16 @@ class App extends Component {
             history.push('/');
           }} />
         )} />
-
         <Route exact path='/register' component={RegisterComponent} />
         <Route exact path='/signin' component={SignInComponent} />
         <Route exact path='/register/buyerregistration' component={BuyerRegistrationComponent} />
         <Route exact path='/aboutus' component={Aboutus} />
+        <Route exact path='/addtext' component={Addtext} />
         <Route exact path='/register/manufacturerregistration' component={ManufacturerRegistrationComponent} />
 
         <footer>
           <Link to='/contactus'>Contact us</Link>
+          <Link to='/addtext'>Info</Link>
           <Link to='/aboutus'>About us</Link>
         </footer>
       </div>
