@@ -7,6 +7,7 @@ import SignInComponent from './components/signin';
 import RegisterComponent from './components/registration/register';
 import BuyerRegistrationComponent from './components/registration/buyerregistration';
 import ManufacturerRegistrationComponent from './components/registration/maufacturerregistration';
+import Aboutus from './components/aboutus';
 
 import database from './configuration/firebase';
 
@@ -43,6 +44,7 @@ class App extends Component {
         <Route exact path='/register' component={RegisterComponent} />
         <Route exact path='/signin' component={SignInComponent} />
         <Route exact path='/register/buyerregistration' component={BuyerRegistrationComponent} />
+        <Route exact path='/aboutus' component={Aboutus} />
         <Route exact path='/register/manufacturerregistration' component={ManufacturerRegistrationComponent} />
 
         <footer>
